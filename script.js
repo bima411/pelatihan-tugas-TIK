@@ -6,24 +6,26 @@
 // GANTI dengan nomor WhatsApp admin yang sebenarnya.
 // Format: 62 + nomor tanpa angka 0 di depan.
 // Contoh: 081234567890 menjadi 6281234567890.
-const NOMOR_ADMIN = "62+0845+6667+8976";
+const NOMOR_ADMIN = "6282335793398";
 
 // Data katalog dan harga awal per potong.
 // Silakan sesuaikan harga dengan harga resmi LR APPAREL.
 const DAFTAR_DESAIN = [
   {
     kode: "LR-001",
-    nama: "Venom",
+    nama: "Jersey Bola",
     harga: 100000,
     deskripsi: "Sporty, dinamis, dan modern.",
+    gambar: "images/velocity.jpg",
     warna: "#c7f36b",
     latar: "linear-gradient(140deg, #293d1b, #131d15)"
   },
   {
     kode: "LR-002",
-    nama: "Kiper",
+    nama: "Phantom",
     harga: 110000,
     deskripsi: "Minimalis dengan karakter kuat.",
+    gambar: "images/phantom.jpg",
     warna: "#d7dce6",
     latar: "linear-gradient(140deg, #354254, #151d29)"
   },
@@ -32,6 +34,7 @@ const DAFTAR_DESAIN = [
     nama: "Striker",
     harga: 120000,
     deskripsi: "Tampilan berani untuk tim kompetitif.",
+    gambar: "images/striker.jpg",
     warna: "#ff9d72",
     latar: "linear-gradient(140deg, #552e2b, #241819)"
   }
@@ -46,7 +49,7 @@ const BIAYA_BAHAN = {
 
 const NAMA_BAHAN = {
   dryfit: "Dryfit Standar",
-  premium: "Dryfit Premium",
+  premium: "Emboss",
   interlock: "Interlock"
 };
 
