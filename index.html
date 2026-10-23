@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pemesanan jersi custom LR APPAREL. Pilih desain, hitung biaya, dan pesan melalui WhatsApp.">
+  <title>LR APPAREL | Pemesanan Jersi Custom</title>
+
+  <!-- Menghubungkan file CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Menghubungkan file JavaScript -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header class="navbar">
+    <a class="brand" href="#beranda">
+      <span class="brand-logo">LR</span>
+      <span>LR <strong>APPAREL</strong></span>
+    </a>
+    <nav>
+      <a href="#beranda">Beranda</a>
+      <a href="#desain">Desain</a>
+      <a href="#pemesanan">Pemesanan</a>
+    </nav>
+    <a class="nav-button" href="#pemesanan">Pesan Sekarang</a>
+  </header>
+
+  <main>
+    <section class="hero" id="beranda">
+      <div class="hero-content">
+        <span class="eyebrow">CUSTOM JERSEY • LR APPAREL</span>
+        <h1>Wujudkan Identitas Tim dengan <span>Jersi Custom.</span></h1>
+        <p>
+          Buat jersi untuk tim, komunitas, sekolah, atau turnamen Anda.
+          Pilih desain, tentukan bahan, dan kirim pesanan secara praktis.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#desain">Lihat Desain</a>
+          <a class="button button-secondary" href="#pemesanan">Mulai Pesan</a>
+        </div>
+        <div class="hero-features">
+          <span>✓ Desain custom</span>
+          <span>✓ Estimasi biaya</span>
+          <span>✓ Pemesanan WhatsApp</span>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-label="Ilustrasi jersi LR APPAREL">
+        <div class="art-glow"></div>
+        <div class="jersey-shape">
+          <span class="jersey-brand">LR</span>
+          <span class="jersey-number">10</span>
+          <span class="jersey-label">APPAREL</span>
+        </div>
+        <div class="art-caption">YOUR TEAM. YOUR IDENTITY.</div>
+      </div>
+    </section>
+
+    <section class="section" id="desain">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">KOLEKSI DESAIN</span>
+          <h2>Pilih Jersi Favorit Anda</h2>
+          <p>Pilih desain untuk melihat estimasi harga per potong.</p>
+        </div>
+      </div>
+
+      <!-- Kartu desain dibuat otomatis oleh script.js -->
+      <div class="catalog-grid" id="catalogGrid">
+        <p class="loading-text">Memuat katalog desain...</p>
+      </div>
+    </section>
+
+    <section class="order-section" id="pemesanan">
+      <div class="order-intro">
+        <span class="eyebrow">FORMULIR PEMESANAN</span>
+        <h2>Pesan Jersi Tim Anda</h2>
+        <p>
+          Isi data pemesanan dengan benar. Estimasi biaya akan dihitung
+          otomatis berdasarkan desain, jumlah, dan bahan.
+        </p>
+
+        <div class="info-card">
+          <span class="info-icon">01</span>
+          <div>
+            <strong>Pilih desain dan bahan</strong>
+            <p>Tentukan model jersi sesuai kebutuhan tim.</p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <span class="info-icon">02</span>
+          <div>
+            <strong>Periksa estimasi biaya</strong>
+            <p>Lihat total, perkiraan DP, dan sisa pembayaran.</p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <span class="info-icon">03</span>
+          <div>
+            <strong>Kirim ke WhatsApp</strong>
+            <p>Periksa kembali pesan sebelum mengirimnya kepada admin.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="order-card">
+        <form id="orderForm">
+          <h3>Data Pemesan</h3>
+
+          <div class="form-group">
+            <label for="nama">Nama pemesan *</label>
+            <input id="nama" name="nama" type="text"
+              placeholder="Nama lengkap" autocomplete="name" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="wa">Nomor WhatsApp *</label>
+              <input id="wa" name="wa" type="tel"
+                placeholder="08xxxxxxxxxx" autocomplete="tel" required>
+            </div>
+            <div class="form-group">
+              <label for="tim">Nama tim *</label>
+              <input id="tim" name="tim" type="text"
+                placeholder="Contoh: FC Garuda" required>
+            </div>
+          </div>
+
+          <h3>Detail Jersi</h3>
+
+          <div class="form-group">
+            <label for="desain">Pilih desain *</label>
+            <select id="desain" name="desain" required>
+              <option value="">Pilih desain jersi</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="jumlah">Jumlah jersi *</label>
+              <input id="jumlah" name="jumlah" type="number"
+                min="1" max="500" value="10" step="1" required>
+              <small>Minimal 1, maksimal 500 potong.</small>
+            </div>
+
+            <div class="form-group">
+              <label for="bahan">Pilihan bahan *</label>
+              <select id="bahan" name="bahan" required>
+                <option value="dryfit">Dryfit Standar</option>
+                <option value="premium">Dryfit Premium (+Rp10.000/pcs)</option>
+                <option value="interlock">Interlock (+Rp15.000/pcs)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="dp">DP awal *</label>
+              <select id="dp" name="dp">
+                <option value="30">30% dari total</option>
+                <option value="50" selected>50% dari total</option>
+                <option value="60">60% dari total</option>
+                <option value="75">75% dari total</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="target">Target selesai</label>
+              <input id="target" name="target" type="date">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="pemain">Nama dan nomor pemain</label>
+            <textarea id="pemain" name="pemain" rows="3"
+              placeholder="Contoh:&#10;01 - Andi&#10;10 - Budi"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="catatan">Catatan tambahan</label>
+            <textarea id="catatan" name="catatan" rows="3"
+              placeholder="Ukuran, warna, logo, atau permintaan khusus..."></textarea>
+          </div>
+
+          <p class="form-note">* Wajib diisi. Estimasi waktu produksi dan pembayaran akhir akan dikonfirmasi admin.</p>
+
+          <button class="button button-primary submit-button"
+            id="contactButton" type="submit">
+            Kirim Pesanan ke WhatsApp
+          </button>
+        </form>
+
+        <aside class="summary-card" aria-live="polite">
+          <h3>Ringkasan Estimasi</h3>
+
+          <div class="summary-line">
+            <span>Desain</span>
+            <strong id="ringkasanDesain">Belum dipilih</strong>
+          </div>
+          <div class="summary-line">
+            <span>Jumlah</span>
+            <strong id="ringkasanJumlah">10 potong</strong>
+          </div>
+          <div class="summary-line">
+            <span>Harga per potong</span>
+            <strong id="hargaSatuan">Rp0</strong>
+          </div>
+          <div class="summary-line">
+            <span>Bahan</span>
+            <strong id="ringkasanBahan">Dryfit Standar</strong>
+          </div>
+
+          <div class="summary-total">
+            <span>Estimasi total</span>
+            <strong id="total">Rp0</strong>
+          </div>
+
+          <div class="summary-line">
+            <span>Estimasi DP</span>
+            <strong id="nilaiDP">Rp0</strong>
+          </div>
+          <div class="summary-line">
+            <span>Perkiraan sisa</span>
+            <strong id="sisa">Rp0</strong>
+          </div>
+
+          <p class="summary-disclaimer">
+            Harga merupakan estimasi awal, belum termasuk biaya tambahan
+            jika ada. Konfirmasi harga final kepada admin LR APPAREL.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="closing-section">
+      <span class="eyebrow">LR APPAREL</span>
+      <h2>Siap Membuat Jersi untuk Tim Anda?</h2>
+      <p>Mulai dari pilihan desain, lalu kirim detail pesanan Anda.</p>
+      <a class="button button-primary" href="#pemesanan">Buat Pesanan</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand" href="#beranda">
+      <span class="brand-logo">LR</span>
+      <span>LR <strong>APPAREL</strong></span>
+    </a>
+    <p>Jersi custom untuk tim dan komunitas Anda.</p>
+    <p>© <span id="tahun"></span> LR APPAREL. Hak cipta dilindungi.</p>
+  </footer>
+
+</body>
+</html>
